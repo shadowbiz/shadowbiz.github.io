@@ -1,9 +1,10 @@
-#Last updated February 15th 2021
+#Last updated February 17th 2021
 #Appodeal
 appodeal.com, 222, DIRECT
 #BidMachine
 bidmachine.io, 222, DIRECT
 #AdMob
+google.com, pub-1631781026253192, DIRECT, f08c47fec0942fa0
 #Copy Admob's app-ads.txt entry from your Admob dashboard
 #Facebook
 #Replace the Business ID below with your Facebook Business ID
@@ -35,6 +36,11 @@ EMXDGT.com, 594, RESELLER, 1e1d41537f7cad7f
 appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
 rubiconproject.com,16928, RESELLER, 0bfd66d529a55807
 Blis.com, 33, RESELLER, 61453ae19a4b73f4
+#Amazon
+aps.amazon.com, 13476152, DIRECT
+aps.amazon.com, 13277230, DIRECT
+aps.amazon.com, 15083519, DIRECT
+aps.amazon.com, 15323246, DIRECT
 #IronSource
 ironsrc.com, 186063, RESELLER, 79929e88b2ba73bc
 ironsrc.com, 228853, RESELLER, 79929e88b2ba73bc
@@ -322,6 +328,8 @@ improvedigital.com, 1210, RESELLER
 loopme.com, 11322, RESELLER, 6c8d5f95897a5a3b
 rubiconproject.com, 20744, RESELLER, 0bfd66d529a55807
 openx.com, 540298543, RESELLER, 6a698e2ec38604c6
+lkqd.net, 647, RESELLER, 59c49fa9598a0117
+lkqd.net, 654, RESELLER, 59c49fa9598a0117
 #Liftoff
 liftoff.io, 7f6945815e6, RESELLER
 #Adcolony (DSP)
