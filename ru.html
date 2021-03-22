@@ -112,35 +112,17 @@
       <a href="http://play.google.com/store/apps/details?id=com.shadowbiz.bowling"><img id="store" src="img/google-play-badge-ru.png"
           alt="Blues Bowling" /></a>
     </figure>
+
     <figure id="colored">
-      <?php
-        //проверяем, существуют ли переменные в массиве POST
-        if (!isset($_POST['fio']) and !isset($_POST['email'])){?>
-      <form action="send.php" method="post">
-        <input type="text" name="fio" placeholder="Enter your name" required>
-        <input type="text" name="email" placeholder="Enter your e-mail" required>
-        <input type="submit" value="Send">
-      </form> <?php
-        } else {
-         //показываем форму
-         $fio = $_POST['fio'];
-         $email = $_POST['email'];
-         $fio = htmlspecialchars($fio);
-         $email = htmlspecialchars($email);
-         $fio = urldecode($fio);
-         $email = urldecode($email);
-         $fio = trim($fio);
-         $email = trim($email);
-         if (mail("shadowbizgame@gmail.com", "Support request", "Name:".$fio.". E-mail: ".$email." Message: ".$message ,"From: User \r\n")){  
-        echo "Message sent"; 
-        } else { 
-        echo "Error sending a message";
-        }
-        }
-        ?>
+      <summary>Есть вопросы или нужна помощь?</summary>
+      <p>
+        Пишите нам на e-mail:<br />
+        <a href="mailto:shadowbizgame@gmail.com">shadowbizgame@gmail.com</a>
+      </p>
     </figure>
-
-
+    <figure id="colored">
+                                                                     
+    </figure>
   </article>
 
   <script type="text/javascript">
