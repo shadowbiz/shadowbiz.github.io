@@ -559,3 +559,7 @@ e-planning.net,ea9874674191f1ff,RESELLER,c1ba615865ed87b2
 #Media.net
 media.net, 8CU77A9X2, RESELLER
 media.net, 8CUVN6879, RESELLER
+
+
+#Admob
+google.com, pub-1631781026253192, DIRECT, f08c47fec0942fa0
