@@ -1,0 +1,10 @@
+{
+  "Reward":
+  [
+    {"Shuffle":1,"Hint":1,"Undo":1},
+    {"Shuffle":2,"Hint":2,"Undo":2},
+    {"Shuffle":3,"Hint":3,"Undo":3},
+    {"Shuffle":4,"Hint":4,"Undo":4},
+    {"Shuffle":5,"Hint":5,"Undo":5}
+  ] 
+}
