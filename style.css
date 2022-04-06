@@ -9,7 +9,7 @@ body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldse
 }
 
 body {
-    background: #f2f0ed /* url(img/bg_chalk.png) */;
+    background: #b2b2b2 /* url(img/bg_chalk.png) */;
     font-family: 'Clear Sans', sans-serif;
     font-size: 19px; 
     line-height: 36px;
