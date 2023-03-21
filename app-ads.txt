@@ -28,6 +28,7 @@ appnexus.com, 11236, RESELLER, f5ab79cb980f11d1
 #Facebook
 #Replace the Business ID below with your Facebook Business ID
 facebook.com, Business ID, RESELLER, c3e20eee3f780d68
+facebook.com, Business ID, DIRECT, 417547412254417
 #AdColony
 adcolony.com, fcaa373cac67c9f927aa914013b8346e, RESELLER, 1ad675c9de6b5176
 #Applovin
