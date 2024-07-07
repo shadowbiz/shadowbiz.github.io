@@ -13,26 +13,10 @@
  	<script src="app.js"></script>
     <script>
         window.onload = function() {
-            var mimeType = getParameterByName('mimeType');
-			var mediaElement;
-			if (mimeType) {
-				var mediaType = mimeType.split('/')[0];
-				if (mediaType) {
-					mediaElement = document.getElementById(mediaType);
-                }
-			} else {
-				mediaElement = document.getElementById('video');
-			}
-
+			var mediaElement = document.getElementById('video');
+			
 			window.connectManager = new connectsdk.ConnectManager();
             window.connectManager.setMediaElement(mediaElement);
-
-            var cleanupVideo = function() {
-				if (mediaElement.playbackRate != 0)
-					mediaElement.pause();
-
-				mediaElement.style.display = 'none';
-			};
 
 			var textContainer = document.getElementById('textContainer');
 			var textElement = document.getElementById('textMessage');
@@ -47,8 +31,7 @@
 					var messageString;
 					var isJSON = false;
 
-					if (typeof message == "string")
-					{
+					if (typeof message == "string") {
 						messageString = message;
 					} else if (typeof message == "object")
 					{
