@@ -4,11 +4,29 @@
     <title>Connect SDK Web App</title>
 </head>
 <body>
-    <video id='media' />
+    <video id="video" class="media" autoplay></video>
     <script src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script src="connect.js"></script>
     <script>
         window.onload = function() {
+            var mimeType = getParameterByName('mimeType');
+			var mediaElement;
+			if (mimeType) {
+				var mediaType = mimeType.split('/')[0];
+				if (mediaType) {
+					mediaElement = document.getElementById(mediaType);
+                }
+			} else {
+				mediaElement = document.getElementById('video');
+			}
+
+            var cleanupVideo = function() {
+				if (mediaElement.playbackRate != 0)
+					mediaElement.pause();
+
+				mediaElement.style.display = 'none';
+			};
+            
             window.connectManager = new connectsdk.ConnectManager();
 
             window.mediaElement = document.getElementById('media');
