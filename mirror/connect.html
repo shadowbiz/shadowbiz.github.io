@@ -23,6 +23,9 @@
 				mediaElement = document.getElementById('video');
 			}
 
+			window.connectManager = new connectsdk.ConnectManager();
+            window.connectManager.setMediaElement(mediaElement);
+
             var cleanupVideo = function() {
 				if (mediaElement.playbackRate != 0)
 					mediaElement.pause();
@@ -30,17 +33,12 @@
 				mediaElement.style.display = 'none';
 			};
 
-		var textContainer = document.getElementById('textContainer');
-				var textElement = document.getElementById('textMessage');
+			var textContainer = document.getElementById('textContainer');
+			var textElement = document.getElementById('textMessage');
 
-				window.connectManager.on('ready', function(evt) {
-					textElement.innerText = "Ready to receive messages";
-				});
-		
-            window.connectManager = new connectsdk.ConnectManager();
-
-            window.mediaElement = document.getElementById('media');
-            window.connectManager.setMediaElement(window.mediaElement);
+			window.connectManager.on('ready', function(evt) {
+				textElement.innerText = "Ready to receive messages";
+			});
 
             window.connectManager.on('message', function(data) {
 					var from = data.from;
