@@ -5,6 +5,9 @@
 </head>
 <body>
     <video id="video" class="media" autoplay></video>
+	<div id="textContainer">
+		<div id="textMessage">App is loading...</div>
+	</div>
     <script src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script src="connect.js"></script>
     <script>
@@ -26,15 +29,42 @@
 
 				mediaElement.style.display = 'none';
 			};
-            
+
+		var textContainer = document.getElementById('textContainer');
+				var textElement = document.getElementById('textMessage');
+
+				window.connectManager.on('ready', function(evt) {
+					textElement.innerText = "Ready to receive messages";
+				});
+		
             window.connectManager = new connectsdk.ConnectManager();
 
             window.mediaElement = document.getElementById('media');
             window.connectManager.setMediaElement(window.mediaElement);
 
-            window.connectManager.on("message", function(data) {
-                window.connectManager.sendMessage(data.from, "Got your message");
-            });
+            window.connectManager.on('message', function(data) {
+					var from = data.from;
+					var message = data.message;
+					var messageString;
+					var isJSON = false;
+
+					if (typeof message == "string")
+					{
+						messageString = message;
+					} else if (typeof message == "object")
+					{
+						messageString = JSON.stringify(message);
+						isJSON = true;
+					}
+
+					textContainer.style.display = 'table';
+					textElement.innerText = messageString;
+
+					if (isJSON)
+						window.connectManager.sendMessage(from, {message:"I got your JSON message :-)"});
+					else
+						window.connectManager.sendMessage(from, "I got your message :-)");
+				});
 
             window.connectManager.init();
         };
