@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Connect SDK Web App</title>
+</head>
+<body>
+    <video id='media' />
+    <script src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
+    <script src="connect.js"></script>
+    <script>
+        window.onload = function() {
+            window.connectManager = new connectsdk.ConnectManager();
+
+            window.mediaElement = document.getElementById('media');
+            window.connectManager.setMediaElement(window.mediaElement);
+
+            window.connectManager.on("message", function(data) {
+                window.connectManager.sendMessage(data.from, "Got your message");
+            });
+
+            window.connectManager.init();
+        };
+    </script>
+</body>
+</html>
